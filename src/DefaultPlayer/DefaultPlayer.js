@@ -128,7 +128,7 @@ export default videoConnect(
             readyState,
             networkState,
             error: error || networkState === 3,
-            loading: readyState < READY_STATE_HAVE_METADATA,
+            loading: this.videoEl.readyState < this.videoEl.HAVE_METADATA,
             percentagePlayed: getPercentagePlayed(restState),
             percentageBuffered: getPercentageBuffered(restState),
             ...restState
